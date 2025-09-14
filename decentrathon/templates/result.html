@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI InDrive AI Car Inspector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class = "container">
+            <div class="flex">
+                <div id="header-left">
+                    <img src="{{ url_for('static', filename='indrive_logo.png') }}" alt="Logo" id = "logo">
+                </div>
+
+                <div id="header-center" class = "flex">
+                        <a href="#">Home</a>
+                        <a href="#">How It Works</a>
+                </div>
+
+                <div id="header-right" >
+                    <div class="dropdown" id="languageDropdown">
+                        
+                        <div class="dropdown-button flex" id="dropdownButton">
+                            <div id = "align">
+                                <i class="fa-solid fa-globe"></i>
+                                <span id="selectedLang">us English</span>     
+                            </div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+
+                        <div class="dropdown-content" id="dropdownContent">
+                          <div data-lang="us English">US English</div>
+                          <div data-lang="ru Русский">RU Русский</div>
+                          <div data-lang="kz Қазақша">KZ Қазақша</div>
+                        </div>
+
+                      </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main> 
+        <div class="container main-result">
+            <div class="results">
+                <img src="{{ url_for('static', filename='car.jpg') }}" alt="Uploaded Image" class="img-result">
+            </div>
+
+            <div class="results second">
+                <div class = "flex internal">
+                    <h2 style = "color: var(--greenish);">Clean</h2>
+                    <div class="res">
+                        <h3>93%</h3>
+                    </div>
+                </div>
+                
+                <div class = "flex internal">
+                    <h2 style = "color: var(--greenish);">Dunt</h2>
+                    <div class="res">
+                        <h3>32%</h3>
+                    </div>
+                </div>
+                <div class = "flex internal">
+                    <h2 style = "color: var(--greenish);">Rust</h2>
+                    <div class="res">
+                        <h3>12%</h3>
+                    </div>
+                </div>
+                <div class = "flex internal">
+                    <h2 style = "color: var(--greenish);">Scratch</h2>
+                    <div class="res">
+                        <h3>16%</h3>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://kit.fontawesome.com/54592158fb.js" crossorigin="anonymous"></script>
+</body>
+</html>

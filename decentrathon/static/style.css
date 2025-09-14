@@ -1,0 +1,295 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing:border-box;
+}
+
+:root{
+    --greenish: #8FDB5E; 
+    --gray-text: #858585;
+    --bg:#f4f4f4;
+    --darker-bg: #eeeeee; 
+    --light-greenish: #D6FFBB;
+    --dark-greenish: #86CE56;
+}
+  
+html, body {   
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darker-bg); 
+}
+
+a{
+    color: var(--gray-text);
+    font-weight: 500;
+    text-decoration: none;
+    font-family: sans-serif, Arial, Helvetica;   
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+
+.container {
+    width: 95%;
+    margin: auto;
+    font-family: sans-serif, Arial, Helvetica;
+    line-height: 1.6;
+}
+
+.border{
+    border: red 3px solid;
+}
+
+header {
+    background: var(--bg);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+#logo{
+    width: 230px;
+    height: auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0;
+}
+
+#header-center{
+    gap: 2.8em;
+}
+
+
+.dropdown {
+    position: relative;
+    width: 230px;
+}
+
+.dropdown-button {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .dropdown-button span {
+    margin-left: 5px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+
+#align{
+    display: flex;                 /* Enable flexbox */
+    justify-content: center;       /* Center horizontally */
+    align-items: center;
+}
+
+  .dropdown-content div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    color: #333;
+  }
+
+  .dropdown-content div:hover {
+    background-color: #f0f0f0;
+  }
+
+  .dropdown.show .dropdown-content {
+    display: block;
+  }
+
+#selectedLang{
+    color: black;
+}
+
+
+.fa-solid{
+    font-size: 2rem;
+    color: #333;
+}
+main {
+    padding: 20px;
+    min-height: 400px;
+    flex: 1;
+/*
+    display: flex;          
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;  
+*/ 
+/*take off the comments in case if 
+you want your main to be placed right in the 
+middle of the website*/
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    padding: 60px;
+}
+
+#load{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2em;
+}
+
+h4{
+    color: var(--gray-text);
+    font-weight: 500;
+}
+
+.loading-photo{
+    width: 60%;
+    border: var(--gray-text) 3px dashed;
+    border-radius: 2em;
+    padding: 2em 0;
+    gap: 3em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.green-circle{
+    background-color: var(--light-greenish);
+    width: 8em;
+    height: 8em;
+    border-radius: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fa-download{
+    color: var(--greenish);
+    font-size: 3rem;
+}
+
+button{
+    font-family: sans-serif, Arial, Helvetica;   
+    font-size: 1rem;
+}
+
+.browse-button{
+    border: none;
+    background-color: var(--greenish);
+    padding: 2.8em;
+    height: .2em;
+    border-radius: 25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.browse-button:hover{
+    background-color: var(--dark-greenish);
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+.fa-image{
+    color: var(--darker-bg);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.results{
+    width: 47%;
+    padding: 2em 0;
+    height: auto;
+    background-color: var(--bg);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    border-radius: 5em;
+}
+
+.res{
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    border-radius: 5em;
+    border: #333 1px solid;
+}
+
+.main-result{
+    display: flex;
+    justify-content: space-between;
+}
+
+.internal{
+    gap: 2em;
+    padding: 0 2em;
+    font-size: 1.2rem;
+}
+
+.res{
+    width: 80%;
+    border: .2px var(--gray-text) solid;
+    font-size: 2rem;
+    color: var(--gray-text);
+}
+
+.second{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.img-result{
+    width: 90%;
+    height: 40em;
+    border: 1px black solid;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    border-radius: 5em;
+    
+}

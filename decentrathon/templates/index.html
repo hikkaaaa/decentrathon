@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI InDrive AI Car Inspector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class = "container">
+            <div class="flex">
+                <div id="header-left">
+                    <img src="{{ url_for('static', filename='indrive_logo.png') }}" alt="Logo" id = "logo">
+                </div>
+
+                <div id="header-center" class = "flex">
+                        <a href="#">Home</a>
+                        <a href="#">How It Works</a>
+                </div>
+
+                <div id="header-right" >
+                    <div class="dropdown" id="languageDropdown">
+                        
+                        <div class="dropdown-button flex" id="dropdownButton">
+                            <div id = "align">
+                                <i class="fa-solid fa-globe"></i>
+                                <span id="selectedLang">us English</span>     
+                            </div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+
+                        <div class="dropdown-content" id="dropdownContent">
+                          <div data-lang="us English">US English</div>
+                          <div data-lang="ru Русский">RU Русский</div>
+                          <div data-lang="kz Қазақша">KZ Қазақша</div>
+                        </div>
+
+                      </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    
+    <main>
+        <div class = "container main">         
+            <div>
+                <h1>InDrive AI Car Inspector</h1>
+                <h2 style = "color: var(--greenish);">Drive with Confidence. Ride with Assurance.</h2>
+                <h3 style = "color: var(--gray-text);">Check your car's condition in seconds with AI-powered analysis</h3>
+            </div>
+
+            <div id = "load">
+                <div id = "load-first">
+                    <h2>Upload a photo of your car</h2>
+                    <h4>(without license plate for privacy)</h4>
+                </div>
+                <div class="loading-photo">
+                    <div class="green-circle">
+                        <i class="fa-solid fa-download"></i>
+                    </div>
+
+                    <span>
+                        <h3 style = "color: var(--gray-text);">Drag and drop your car photo here, or click to browse</h3>
+                        <h4>Supported formats: JPG, PNG, WebP (max 10MB)</h4>
+                    </span>
+                    <form class="p-3 text-center" action="/" method="post" enctype="multipart/form-data">
+                        <!-- Browse button -->
+                        <div class="browse-button">
+                            <label for="file-upload" class="custom-file-upload">
+                                <i class="fa-solid fa-image"></i>
+                                <h3 style="color: var(--darker-bg);">Browse Files</h3>
+                            </label>
+                            <input id="file-upload" type="file" name="imagefile" hidden>
+                        </div>
+                    
+                        <!-- Predict button (hidden at first) -->
+                        <div id="predict-btn" style="display: none; margin-top: 20px;">
+                            <button type="submit" class="browse-button">
+                                <h3 style="color: var(--darker-bg);">Predict Image</h3>
+                            </button>
+                        </div>
+                    </form>
+                </div>   
+                <h4>By uploading, you agree that the photo contains no license plates or personal information</h4>
+            </div>    
+        </div>
+    </main>
+
+    <!--
+    <footer>
+        <div class = "container border">
+            <div class="flex">
+                <div id="header-left" class = "border">
+                    <h1>smtsmt</h1>
+                </div>
+
+                <div id="header-center" class = "border">
+                    <h1>smtsmt</h1>
+                </div>
+
+                <div id="header-right" class = "border">
+                    <h1>smtsmt</h1>
+                </div>
+            </div>
+        </div>
+    </footer>
+    -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://kit.fontawesome.com/54592158fb.js" crossorigin="anonymous"></script>
+</body>
+</html>
